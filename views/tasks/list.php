@@ -24,7 +24,7 @@ echo  $this->registerJs(
                     }
 
                     $.pjax.reload({container:'#tasks'});
-
+                    $.pjax.reload({container:'#addTaskForm'});
 
                 }
             });
@@ -36,7 +36,7 @@ echo  $this->registerJs(
 
 <div class="tasks-index">
 
-    <? Pjax::begin(['id' => 'tasks' ); ?>
+    <? Pjax::begin(['id' => 'tasks', 'linkSelector' => false, 'formSelector' => '#addTaskForm']); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [

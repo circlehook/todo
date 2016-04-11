@@ -6,7 +6,7 @@ use yii\widgets\Pjax;
 
 
 <div class="tasks-list">
-<? Pjax::begin(['id' => 'new_comment']); ?>
+
     <?php $form = ActiveForm::begin(['options' => ['id'=>'addTaskForm'] ] ); ?>
 
         <?= $form->field($model, 'task') ?>
@@ -16,5 +16,5 @@ use yii\widgets\Pjax;
             <?= Html::submitButton(Yii::t('app', 'Добавить задачу'), ['class' => 'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
-<? Pjax::end(); ?>
+
 </div><!-- tasks-list -->
